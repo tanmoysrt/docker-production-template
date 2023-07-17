@@ -1,7 +1,6 @@
 # Install dependencies only when needed
 FROM node:18.11-slim AS deps
 WORKDIR /app
-COPY package.json ./
 # Install dependencies based on the preferred package manager
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 RUN \
